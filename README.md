@@ -99,25 +99,25 @@
 Основная таблица пользователей. Поля: `id`, `name`, `email`, `age`
 
 ### users_address
-Адреса пользователей (из поля `address`). Поля: `id`, `user_id`, `street`, `city`, `zipcode`
+Адреса пользователей (из поля `address`). Поля: `id`, `parent_id`, `street`, `city`, `zipcode`
 
 ### products
 Основная таблица товаров. Поля: `id`, `name`, `category`, `price`
 
 ### products_tags
-Теги товаров (из массива `tags`). Поля: `id`, `product_id`, `value`
+Теги товаров (из массива `tags`). Поля: `id`, `parent_id`, `value`
 
 ### orders
 Основная таблица заказов. Поля: `id`, `user_id`, `total`, `status`, `order_time`
 
 ### orders_product_ids
-Товары в заказах (из массива `product_ids`). Поля: `id`, `order_id`, `product_id`
+Товары в заказах (из массива `product_ids`). Поля: `id`, `parent_id`, `product_id`
 
 ### reviews
 Основная таблица отзывов. Поля: `id`, `product_id`, `user_id`, `rating`, `comment`, `review_time`
 
 ### reviews_metadata
-Метаданные отзывов (из объекта `metadata`). Поля: `id`, `review_id`, `likes`, `dislikes`
+Метаданные отзывов (из объекта `metadata`). Поля: `id`, `parent_id`, `likes`, `dislikes`
 
 ## Связи PostgreSQL
 
