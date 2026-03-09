@@ -121,14 +121,14 @@
 
 ## Связи PostgreSQL
 
-- `users.id → users_address.user_id`  
+- `users.id → users_address.parent_id`  
 - `users.id → orders.user_id`  
 - `users.id → reviews.user_id`  
-- `products.id → products_tags.product_id`  
-- `products.id → orders_product_ids.product_id`  
+- `products.id → products_tags.parent_id`  
+- `products.id → orders_product_ids.product_ids`  
 - `products.id → reviews.product_id`  
 - `orders.id → orders_product_ids.order_id`  
-- `reviews.id → reviews_metadata.review_id`
+- `reviews.id → reviews_metadata.parent_id`
 
 ---
 
